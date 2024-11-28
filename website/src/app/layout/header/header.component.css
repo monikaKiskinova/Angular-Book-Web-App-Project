@@ -1,0 +1,44 @@
+
+header {
+    min-height: 80pt;
+    background-color: burlywood;
+    display: flex;
+}
+
+.logo {
+    font-size: 20pt;
+    font-weight: bold;
+    margin: 10pt;
+}
+
+.logo-container {
+    display: flex;
+}
+
+/* .logo-container > img { */
+img {
+    height: 40pt;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    float: none;
+    margin: 10pt;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover {
+    color: white;
+}
+
+li.profile {
+    float: right;
+}
