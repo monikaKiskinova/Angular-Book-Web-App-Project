@@ -9,3 +9,4 @@ Implementation:
    with routing to the corresponging views when clicking on a link/button
 
 4. Add login form;
+5. Add server - Rest API with MongoDB Atlas;
