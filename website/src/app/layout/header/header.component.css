@@ -5,6 +5,10 @@ header {
     display: flex;
 }
 
+div {
+    padding: 5pt;
+}
+
 .logo {
     font-size: 20pt;
     font-weight: bold;
@@ -26,7 +30,6 @@ ul {
 }
 
 li {
-    float: none;
     margin: 10pt;
 }
 
@@ -39,6 +42,6 @@ li a:hover {
     color: white;
 }
 
-li.profile {
+/* li.profile {
     float: right;
-}
+} */

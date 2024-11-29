@@ -2,12 +2,16 @@ div {
     background-color: burlywood;
     /* margin: auto; */
     width: 50%;
-    height: 50%;
+    height: 55%;
     padding: 20pt;
     position: absolute;
     top: 25%;
     left: 25%;
     text-align: center;
+}
+
+h1 {
+    font-size: 30px;
 }
 
 p {

@@ -1,0 +1,32 @@
+.login-container {
+    width: 20%;
+    height: 40%;
+    /* margin: auto; */
+    /* margin: 0; */
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    padding: 30pt 45pt;
+    background-color: burlywood;
+  }
+  
+  input {
+    display: block;
+  }
+  
+  label {
+    margin: 5px 0px;
+  }
+  
+  .button {
+    /* margin: 10pt; */
+    padding: 5pt 10pt;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10pt;
+  }
+
+  p {
+    padding: 5pt;
+    text-align: center;
+  }
