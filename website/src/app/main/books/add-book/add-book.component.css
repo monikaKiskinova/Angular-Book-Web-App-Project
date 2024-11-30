@@ -1,0 +1,18 @@
+.add-book-container {
+    background-color: burlywood;
+    width: 400pt;
+    /* height: fit-content; */
+    /* height: 100%; */
+    margin: auto;
+    margin-top: 50pt;
+    padding: 30pt 50pt;
+}
+
+input, textarea {
+    display: block;
+    width: 300pt;
+}
+
+/* .spacer {
+    height: 50pt;
+} */

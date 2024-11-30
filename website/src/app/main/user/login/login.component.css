@@ -1,12 +1,12 @@
 .login-container {
-    width: 20%;
-    height: 40%;
+    width: 250pt;
+    height: 220pt;
     /* margin: auto; */
     /* margin: 0; */
     position: absolute;
     top: 25%;
     left: 40%;
-    padding: 30pt 45pt;
+    padding: 30pt 50pt;
     background-color: burlywood;
   }
   

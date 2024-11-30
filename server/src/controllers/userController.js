@@ -25,4 +25,10 @@ userController.get('/logout', async (req, res) => {
     res.status(204).end();
 });
 
+userController.get('/:userId', async (req, res) => {
+    const user = await userService.getOne(req.params.userId);
+
+    res.json(user);
+});
+
 export default userController;

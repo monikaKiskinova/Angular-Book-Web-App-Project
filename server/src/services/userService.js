@@ -33,7 +33,10 @@ const userService = {
         // TODO: Invalidate token
         
         return true;
-    }
+    }, 
+    getOne(userId) {
+        return User.findById(userId);
+    },
 }
 
 function generateResponse(user) {

@@ -5,8 +5,9 @@ import bookController from './controllers/bookController.js';
 
 const routes = Router();
 
+routes.use('/', bookController);
 routes.use('/users', userController);
-routes.use('/data/catalog', bookController);
+routes.use('/books', bookController);
 
 
 export default routes;
