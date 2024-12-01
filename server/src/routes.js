@@ -5,7 +5,7 @@ import bookController from './controllers/bookController.js';
 
 const routes = Router();
 
-routes.use('/', bookController);
+// routes.use('/', bookController);
 routes.use('/users', userController);
 routes.use('/books', bookController);
 
