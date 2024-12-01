@@ -2,10 +2,10 @@ div {
     background-color: burlywood;
     /* margin: auto; */
     width: 50%;
-    height: 55%;
+    height: 65%;
     padding: 20pt;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 25%;
     text-align: center;
 }
@@ -16,6 +16,7 @@ h1 {
 
 p {
     font-size: 20px;
+    margin-top: 20px;
 }
 
 img {

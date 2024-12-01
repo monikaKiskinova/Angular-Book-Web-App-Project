@@ -1,11 +1,12 @@
 
 <div class="login-container">
-    <form>
+    <form #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email" email required ngModel #emailInput="ngModel" />
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" />
-        <input class="button" type="button" value="Log in" />
+        <input type="password" id="password" name="password" required ngModel #passwordInput="ngModel" />
+        <button>Log in</button>
+        <!-- <input class="button" type="button" value="Log in" /> -->
     </form>
     <p>New here? <a routerLink="/register">Register</a></p>
 </div>

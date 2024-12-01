@@ -8,11 +8,34 @@
     padding: 30pt 50pt;
 }
 
+h3 {
+    text-align: center;
+}
+
 input, textarea {
     display: block;
     width: 300pt;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 5pt 10pt;
+    margin: 0pt 20pt;
+    border-width: 1px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
 }
 
 /* .spacer {
     height: 50pt;
+}
+.spacer {
+    margin-top: 500px;
 } */

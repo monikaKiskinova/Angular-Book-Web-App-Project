@@ -18,15 +18,22 @@
     margin: 5px 0px;
   }
   
-  .button {
+  button {
+    display: block;
     /* margin: 10pt; */
     padding: 5pt 10pt;
-    cursor: pointer;
+    /* cursor: pointer; */
     margin: auto;
     margin-top: 10pt;
+    border-width: 1px;
+  }
+
+  button:hover {
+    background-color: black;
+    color: white;
   }
 
   p {
-    padding: 5pt;
+    padding: 10pt;
     text-align: center;
   }

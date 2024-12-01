@@ -17,6 +17,8 @@ Implementation:
 9. Add Book and User interfaces;
 10. Add Book List view;
 
+11. Add some functionality to login and addBook forms for fetching data from the forms;
+
 
 
 
