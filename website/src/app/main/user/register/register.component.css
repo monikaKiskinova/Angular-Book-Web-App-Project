@@ -1,0 +1,39 @@
+.register-container {
+    width: 250pt;
+    height: 275pt;
+    margin: auto;
+    /* margin: 0; */
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    padding: 30pt 55pt;
+    background-color: burlywood;
+}
+
+input {
+    display: block;
+}
+
+label {
+    margin: 5px 0px;
+}
+
+button {
+    display: block;
+    /* margin: 10pt; */
+    padding: 5pt 10pt;
+    /* cursor: pointer; */
+    margin: auto;
+    margin-top: 10pt;
+    border-width: 1px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+p {
+    padding: 10pt;
+    text-align: center;
+}
