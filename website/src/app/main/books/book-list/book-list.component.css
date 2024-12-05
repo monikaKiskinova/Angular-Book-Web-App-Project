@@ -1,3 +1,27 @@
+.add-btn, h2 {
+    margin-top: 20pt;
+}
+
+.add-btn > input {
+    background-color: burlywood;
+    border-width: 1px;
+    padding: 5pt;
+    float: right;
+}
+
+.add-btn > input:hover {
+    background-color: black;
+    color: burlywood;
+}
+
+.all-books {
+    display: flex; 
+}
+
+.book {
+    padding-right: 20pt;
+}
+
 img {
     height: 300px;
 }

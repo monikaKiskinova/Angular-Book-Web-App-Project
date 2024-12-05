@@ -1,0 +1,18 @@
+
+.h {
+    padding-top: 20pt;
+    text-align: center;
+}
+
+.all-books {
+    padding-top: 20pt;
+    display: flex; 
+}
+
+.book {
+    padding-right: 20pt;
+}
+
+img {
+    height: 300px;
+}

@@ -1,6 +1,8 @@
 ... this project is a work in progress...
 
 
+An Angular web app for books where users can create lists of the books they have read (Read list) and they wish to read (Wish list)
+
 
 Implementation: 
 1. Initialize project;
@@ -18,6 +20,8 @@ Implementation:
 10. Add Book List view;
 
 11. Add some functionality to login and addBook forms for fetching data from the forms;
+
+12. Adding 5 last added books to home page; 
 
 
 
