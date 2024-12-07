@@ -1,39 +1,55 @@
 .login-container {
-    width: 250pt;
-    height: 220pt;
-    /* margin: auto; */
-    /* margin: 0; */
-    position: absolute;
-    top: 25%;
-    left: 40%;
-    padding: 30pt 50pt;
-    background-color: burlywood;
-  }
-  
-  input {
-    display: block;
-  }
-  
-  label {
-    margin: 5px 0px;
-  }
-  
-  button {
-    display: block;
-    /* margin: 10pt; */
-    padding: 5pt 10pt;
-    /* cursor: pointer; */
-    margin: auto;
-    margin-top: 10pt;
-    border-width: 1px;
-  }
+  width: 250pt;
+  height: 260pt;
+  /* margin: auto; */
+  /* margin: 0; */
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  padding: 30pt 50pt;
+  background-color: burlywood;
+}
 
-  button:hover {
-    background-color: black;
-    color: white;
-  }
+input {
+  display: block;
+}
 
-  p {
-    padding: 10pt;
-    text-align: center;
-  }
+label {
+  margin: 5px 0px;
+}
+
+button {
+  display: block;
+  /* margin: 10pt; */
+  padding: 5pt 10pt;
+  /* cursor: pointer; */
+  margin: auto;
+  margin-top: 10pt;
+  border-width: 1px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+p {
+  padding: 10pt;
+  text-align: center;
+}
+
+p.error {
+  margin: 0;
+  /* padding: 5pt 0pt 0pt 0pt; */
+  padding: 0;
+  color: red;
+  font-size: 12pt;
+}
+
+.spacer {
+  padding: 10pt;
+}
+
+div {
+  height: 26pt;
+}

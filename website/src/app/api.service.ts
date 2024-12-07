@@ -21,4 +21,9 @@ export class ApiService {
     }
     return this.http.get<Book[]>(url);
   }
+
+  createBook(title: string, author: string, img: string, year: number, genre: string, description: string) {
+    const payload = {title, author, img, year, genre, description};
+    return this.http.post<Book>('/home', payload);
+  }
 }

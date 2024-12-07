@@ -1,12 +1,51 @@
 
 <div class="login-container">
-    <form #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
+    <form #form="ngForm" (ngSubmit)="formSubmitHandler(form)">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" email required ngModel #emailInput="ngModel" />
+        <input 
+          type="email" id="email" name="email" 
+          email 
+          required 
+          ngModel 
+          #emailInput="ngModel" />
+
+        @if (emailInput?.touched) {
+        <div>
+            @if (emailInput?.errors?.['required']) {
+            <p class="error">Email is required!</p>
+            }
+            @if (emailInput?.errors?.['email']) {
+            <p class="error">Email is not valid!</p>
+            }
+        </div>
+        }
+        @if (!emailInput?.touched || (!emailInput?.errors?.['required'] && !emailInput?.errors?.['email'])) {
+        <div class="spacer"></div>
+        }
+
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required ngModel #passwordInput="ngModel" />
+        <input 
+          type="password" id="password" name="password" 
+          required 
+          ngModel 
+          #passwordInput="ngModel" 
+          minlength="6"/>
+
+        @if (passwordInput?.touched) {
+        <div>
+            @if (passwordInput?.errors?.['required']) {
+            <p class="error">Password is required!</p>
+            }
+            @if (passwordInput?.errors?.['minlength']) {
+            <p class="error">Password should be at least 6 characters long!</p>
+            }
+        </div>
+        }
+        @if (!passwordInput?.touched || (!passwordInput?.errors?.['required'] && !passwordInput?.errors?.['minlength'])) {
+        <div class="spacer"></div>
+        }
+
         <button>Log in</button>
-        <!-- <input class="button" type="button" value="Log in" /> -->
     </form>
     <p>New here? <a routerLink="/register">Register</a></p>
 </div>

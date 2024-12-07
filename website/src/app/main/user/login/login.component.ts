@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -10,11 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  @ViewChild('loginForm') form: NgForm | undefined;
 
-  formSubmitHandler() {
-    const form = this.form!; 
-
+  formSubmitHandler(form: NgForm) {
     if(form.invalid) {
       console.log('The form is invalid.');
       return;
