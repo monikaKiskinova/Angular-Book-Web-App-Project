@@ -9,4 +9,5 @@ export interface Book {
     description: string,
     userId: User, 
     comments: string[],
+    _id: string,
 }

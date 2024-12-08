@@ -4,11 +4,10 @@ footer {
     color: burlywood;
     width: 100%;
     position: absolute;
-    /* position: sticky; */
     bottom: 0;
+    padding: 10px 0;
 }
 
 p {
-    /* float: right; */
     padding: 5pt;
 }

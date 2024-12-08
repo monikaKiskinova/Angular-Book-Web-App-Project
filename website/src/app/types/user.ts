@@ -5,4 +5,5 @@ export interface User {
     comments: string[],
     readList: string[],
     wantToReadList: string[],
+    bookProgressList: string[],
 }

@@ -24,6 +24,8 @@ Implementation:
 12. Adding 5 last added books to home page; 
 13. Adding validation and error messages to login;
 
+14. Add Book details page;
+
 
 
 STARTING the project

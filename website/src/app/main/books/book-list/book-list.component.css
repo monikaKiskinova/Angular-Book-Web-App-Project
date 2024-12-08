@@ -1,3 +1,9 @@
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
 .add-btn, h2 {
     margin-top: 20pt;
 }
@@ -24,4 +30,8 @@
 
 img {
     height: 300px;
+}
+
+a:hover {
+    color: burlywood;
 }

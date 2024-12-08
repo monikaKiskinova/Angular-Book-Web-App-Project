@@ -1,0 +1,16 @@
+img {
+    height: 450pt;
+}
+
+.book {
+    display: flex;
+    padding: 15pt;
+}
+
+.book-info {
+    float: right;
+    width: 60%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 30px;
+}

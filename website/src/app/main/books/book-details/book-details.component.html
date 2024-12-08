@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="book">
+        <div class="title-and-img">
+            <h3>{{book.title}}</h3>
+            <img src="{{book.img}}" alt="Book cover">
+        </div>
+        <div class="book-info">
+            <p>{{book.author}}</p>
+            <p>{{book.year}}</p>
+            <p>{{book.genre}}</p>
+            <p>{{book.description}}</p>
+        </div>
+    </div>
+
+    <div class="comments">
+        <h3>Comments:</h3>
+        <!-- @for (comment of comments; track $index) {
+
+            } -->
+    </div>
+
+    <div class="buttons">
+        <!-- <input type="button" value="Add a book" routerLink="/add-book"/> -->
+        <button>Comment</button>
+        <!-- <button>Edit</button> -->
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!-- <p>{{user.username}}'s lists</p> -->
+<h1>My lists</h1>
+
+<div class="lists">
+    <div class="read-list">
+        <h3>Read list</h3>
+        @for (book of readBooks; track $index){
+        <span>{{book.title}}</span>
+        <span>{{book.author}}</span>
+        }
+    </div>
+
+    <div class="wish-list">
+        <h3>Wish list</h3>
+        @for (wish of wishListBooks; track $index) {
+        <span>{{wish.title}}</span>
+        <span>{{wish.author}}</span>
+        }
+    </div>
+
+    <div class="reading-progress">
+        <h3>Books reading progress</h3>
+        <!-- @for(book of currentBooks; track $index) { -->
+        <!-- <span>{{book.title}} --- p. {{book.page}}</span> -->
+        <!-- <span>Wildfire --- p. 120</span> -->
+        <span>Wildfire</span>
+        <span>p. 120</span>
+        <!-- } -->
+    </div>
+</div>

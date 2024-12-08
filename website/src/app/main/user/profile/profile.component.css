@@ -1,0 +1,23 @@
+
+.lists {
+    display: flex;
+    height: 60%;
+    margin: 10pt;
+}
+
+div:not(.lists) {
+    width: 60%;
+    border: solid 2px;
+}
+
+.wish-list {
+    margin: 0pt 70pt;
+}
+
+h3 {
+    text-align: center;
+}
+
+span {
+    padding: 10pt;
+}
