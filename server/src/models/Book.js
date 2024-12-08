@@ -14,7 +14,7 @@ const bookSchema = new Schema({
         type: String,
         minLength: 10,
     },
-    _ownerId: {
+    _userId: {
         type: Types.ObjectId,
         ref: 'User',
     }, 

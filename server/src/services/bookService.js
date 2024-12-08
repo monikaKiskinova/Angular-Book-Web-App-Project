@@ -18,7 +18,7 @@ const bookService = {
         return Book.findById(bookId);
     },
     create(bookData, userId) {
-        return Book.create({ ...bookData, _ownerId: userId });
+        return Book.create({ ...bookData, _userId: userId });
     },
     delete(bookId) {
         return Book.findByIdAndDelete(bookId);

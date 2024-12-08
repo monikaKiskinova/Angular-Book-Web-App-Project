@@ -10,7 +10,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minLength: 6,
-    },
+    }, 
 });
 
 userSchema.pre('save', async function () {

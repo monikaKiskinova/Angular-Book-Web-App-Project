@@ -12,12 +12,14 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class BookDetailsComponent implements OnInit{
   book = {} as Book;
+  comments: string[] = [];
   constructor(private route: ActivatedRoute, private apiService: ApiService) {}
 
   ngOnInit(): void {
     const bookId = this.route.snapshot.params['bookId'];
     this.apiService.getSingleBook(bookId).subscribe((book) => {
       this.book = book;
+      this.comments = book.comments;
     })
   }
 }
