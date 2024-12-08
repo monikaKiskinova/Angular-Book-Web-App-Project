@@ -17,7 +17,6 @@ export class HomeComponent {
   
   ngOnInit(): void {
     this.apiService.getBooks(5).subscribe((b) => {
-      console.log(b);
       this.books = b;
     })  
   }
