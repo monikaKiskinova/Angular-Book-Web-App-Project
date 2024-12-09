@@ -18,8 +18,7 @@
             <p class="error">Email is not valid!</p>
             }
         </div>
-        }
-        @if (!emailInput?.touched || (!emailInput?.errors?.['required'] && !emailInput?.errors?.['email'])) {
+        } @else {
         <div class="spacer"></div>
         }
 
@@ -40,8 +39,7 @@
             <p class="error">Password should be at least 6 characters long!</p>
             }
         </div>
-        }
-        @if (!passwordInput?.touched || (!passwordInput?.errors?.['required'] && !passwordInput?.errors?.['minlength'])) {
+        } @else {
         <div class="spacer"></div>
         }
 

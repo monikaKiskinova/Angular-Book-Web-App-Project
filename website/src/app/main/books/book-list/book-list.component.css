@@ -4,8 +4,17 @@ a {
     color: initial;
 }
 
-.add-btn, h2 {
+h2 {
+    margin-bottom: 20pt;
+    float: left;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+}
+
+.add-btn {
     margin-top: 20pt;
+    /* display: flex; */
+    /* justify-content: flex-end; */
 }
 
 .add-btn > input {
@@ -26,6 +35,7 @@ a {
 
 .book {
     padding-right: 20pt;
+    text-align: center;
 }
 
 img {

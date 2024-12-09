@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -10,13 +11,19 @@ import { RouterLink } from '@angular/router';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  formSubmitHandler(form: NgForm) {
+  constructor(private userService: UserService, private router: Router) {}
 
+  formSubmitHandler(form: NgForm) {
     if(form.invalid) {
       console.log('The form is invalid.');
       return;
     }
 
-    console.log(form.value);
+    const {email, password, rePassword} = form.value;
+
+    this.userService.register(email, password, rePassword)
+    .subscribe(() => {
+      this.router.navigate(['/books']);
+    })
   }
 }

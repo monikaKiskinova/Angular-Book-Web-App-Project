@@ -1,5 +1,5 @@
 img {
-    height: 450pt;
+    height: 300pt;
 }
 
 .book {
@@ -13,4 +13,21 @@ img {
     padding: 15px;
     box-sizing: border-box;
     margin: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20pt;
+}
+
+button {
+    padding: 0 5pt;
+    background-color: burlywood;
+    border-radius: 1px;
+    /* gap: 20pt; */
+}
+
+button:hover {
+    background-color: black;
+    color: burlywood;
 }

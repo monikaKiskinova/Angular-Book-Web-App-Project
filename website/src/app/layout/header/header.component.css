@@ -5,6 +5,14 @@ header {
     display: flex;
 }
 
+nav {
+/* #nav-items { */
+    /* background-color: burlywood; */
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .logo {
     font-size: 20pt;
     font-weight: bold;
@@ -13,7 +21,7 @@ header {
 
 #logo-container {
     display: flex;
-    margin-left: 15pt;
+    /* margin-left: 15pt; */
 }
 
 img {
@@ -24,15 +32,20 @@ img {
 ul {
     display: flex;
     list-style: none;
-    float: right; 
+    margin: 0;
 }
 
 li {
-    margin: 15pt;
+    margin: 0 15pt 5pt 15pt;
 }
 
 a {
     text-decoration: none;
+    /* color: black; */
+    color: burlywood;
+}
+
+.logo > a {
     color: black;
 }
 
@@ -40,7 +53,7 @@ li a:hover {
     color: white;
 }
 
-@media(max-width: 600px) {
+/* @media(max-width: 600px) {
     #logo-container {
         width: 100%;
         float: none;
@@ -50,4 +63,4 @@ li a:hover {
         width: 100%;
         float: none;
     }
-}
+} */

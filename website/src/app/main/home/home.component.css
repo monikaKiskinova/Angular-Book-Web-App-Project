@@ -2,17 +2,31 @@
 .h {
     padding-top: 20pt;
     text-align: center;
+    /* background-image: url('../../../../public/background-books.jpg'); */
+    /* background-position: center; */
+    background-color: burlywood;
 }
 
 .all-books {
     padding-top: 20pt;
     display: flex; 
+    gap: 20pt;
 }
 
 .book {
     padding-right: 20pt;
+    text-align: center;
 }
 
 img {
     height: 300px;
+}
+
+a { 
+    text-decoration: none;
+    color: initial;
+}
+
+a:hover {
+    color: burlywood;
 }
