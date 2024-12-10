@@ -10,7 +10,19 @@
             <p>{{book.year}}</p>
             <p>{{book.genre}}</p>
             <p>{{book.description}}</p>
+            <div class="clear"></div>
+            <div class="buttons">
+                <!-- <input type="button" value="Add a book" routerLink="/add-book"/> -->
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
         </div>
+    </div>
+    
+
+    <div class="add-to-list-links">
+        <span class="read-list">I've read this book</span>
+        <span class="wish-list">Add to wish list</span>
     </div>
 
     <div class="comments">
@@ -18,12 +30,7 @@
         @for (comment of comments; track $index) {
         <p>{{comment}}</p>
         }
+        <button>Comment</button>
     </div>
 
-    <div class="buttons">
-        <!-- <input type="button" value="Add a book" routerLink="/add-book"/> -->
-        <button>Comment</button>
-        <button>Edit</button>
-        <button>Delete</button>
-    </div>
 </div>

@@ -20,6 +20,10 @@ export class BookDetailsComponent implements OnInit{
     this.apiService.getSingleBook(bookId).subscribe((book) => {
       this.book = book;
       this.comments = book.comments;
+      console.log({book});
     })
+
+    console.log(this.comments);
   }
+
 }

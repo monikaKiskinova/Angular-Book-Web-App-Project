@@ -12,9 +12,9 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUser(userId: string) {
-    return this.http.get<User>(`/users/${userId}`);
-  }
+  // getUser(userId: string) {
+  //   return this.http.get<User>(`/users/${userId}`);
+  // }
 
   login(email:string, password:string) {
     return this.http.post<User>('/users/login', {email, password})
@@ -27,7 +27,8 @@ export class UserService {
   }
 
   getProfile() {
-    return this.http.get<User>('/users/profile')
+    return this.http.get<User>(`/users/profile`)
+    // return this.http.get<User>(`/users`)
     .pipe(tap((user) => this.user$$.next(user)));
   }
 }

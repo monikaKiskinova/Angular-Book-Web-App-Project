@@ -8,7 +8,7 @@ img {
 }
 
 .book-info {
-    float: right;
+    /* float: right; */
     width: 60%;
     padding: 15px;
     box-sizing: border-box;
@@ -17,6 +17,7 @@ img {
 
 .buttons {
     display: flex;
+    /* display: grid; */
     gap: 20pt;
 }
 
@@ -29,5 +30,19 @@ button {
 
 button:hover {
     background-color: black;
+    color: burlywood;
+}
+
+span {
+    border: 1px solid burlywood;
+    padding: 0 5pt;
+}
+
+span.wish-list {
+    margin-left: 30pt;
+}
+
+span:hover {
+    cursor: pointer;
     color: burlywood;
 }

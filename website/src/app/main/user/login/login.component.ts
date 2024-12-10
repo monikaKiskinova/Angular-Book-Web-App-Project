@@ -25,8 +25,6 @@ export class LoginComponent {
     this.userService.login(email, password).subscribe(() => {
       this.router.navigate(['/profile']);
     })
-
-    console.log(form.value);
   }
 
 }

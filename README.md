@@ -26,6 +26,8 @@ Implementation:
 
 14. Add Book details page;
 
+15. Add login and register functionality;
+
 
 
 STARTING the project
