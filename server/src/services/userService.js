@@ -37,6 +37,10 @@ const userService = {
     getOne(userId) {
         return User.findById(userId);
     },
+    update(userId, userData) {
+        // return Book.findByIdAndUpdate(userId, userData, { runValidators: true });
+        return Book.findByIdAndUpdate({ ...userData, _userId: userId }, { runValidators: true });
+    }
 }
 
 function generateResponse(user) {

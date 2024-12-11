@@ -7,7 +7,7 @@ export interface Book {
     year: number,
     genre: string,
     description: string,
-    userId: User, 
+    _userId: User, 
     comments: string[],
     _id: string,
 }

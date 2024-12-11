@@ -1,3 +1,4 @@
+<!-- <div class="container"> -->
 <!-- <p>{{user.username}}'s lists</p> -->
 <h1>My lists</h1>
 
@@ -20,11 +21,22 @@
 
     <div class="reading-progress">
         <h3>Books reading progress</h3>
-        <!-- @for(book of currentBooks; track $index) { -->
-        <!-- <span>{{book.title}} --- p. {{book.page}}</span> -->
+        <button (click)="showAddForm($event)">Add book progress</button>
+        @if(formIsShown){
+        <div class="form">
+            <form #form="ngForm" (ngSubmit)="addBookPages(form)">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Book you are reading" required ngModel #titleInput="ngModel" />
+                <label for="page">Page</label>
+                <input type="number" id="page" name="page" placeholder="125" required ngModel #pageInput="ngModel" />
+                <button>Add to list</button>
+            </form>
+        </div>
+        }
+        @for(book of currentBooks; track $index) {
+        <span>{{book.title}} --- p. {{book.page}}</span>
         <!-- <span>Wildfire --- p. 120</span> -->
-        <span>Wildfire</span>
-        <span>p. 120</span>
-        <!-- } -->
+        }
     </div>
 </div>
+<!-- </div> -->
