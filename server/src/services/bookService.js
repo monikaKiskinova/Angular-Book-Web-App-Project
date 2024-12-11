@@ -12,6 +12,14 @@ const bookService = {
             query.find(q)
         }
 
+        if(filter.name) {
+            query.find({name: {$regex: filter.name, $options: 'i'}});
+        }
+
+        if(filter.search) {
+            query.find({name: {$regex: filter.search, $options: 'i'}});
+        }
+
         return query;
     },
     getOne(bookId) {

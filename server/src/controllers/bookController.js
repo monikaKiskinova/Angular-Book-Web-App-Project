@@ -7,7 +7,13 @@ const bookController = Router();
 bookController.get('/', async (req, res) => {
     const query = req.query;
 
-    const books = await bookService.getAll(query);
+    let books;
+
+    if(query.hasOwnProperty('limit')) {
+        books = await bookService.getAll().limit(query.limit).lean().sort({$natural:-1});
+    } else {
+        books = await bookService.getAll(query);
+    }
 
     res.json(books);
 });

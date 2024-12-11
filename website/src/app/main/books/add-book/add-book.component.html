@@ -1,16 +1,18 @@
 
-<div class="add-book-container">
+<div class="container">
+<!-- <div class="add-book-container"> -->
     <h3>Add a book</h3>
-    <form #addBookForm="ngForm" (ngSubmit)="formSubmitHandler()">
+    <form #form="ngForm" (ngSubmit)="addBook(form)">
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" id="title" name="title" ngModel #titleInput="ngModel" />
+            <input type="text" id="title" name="title" ngModel #titleInput="ngModel" required />
         </div>
         
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" id="author" name="author" ngModel #authorInput="ngModel" />
+            <input type="text" id="author" name="author" ngModel #authorInput="ngModel" required />
         </div>
+        
         
         <div class="form-group">
             <label for="img">Cover image</label>
@@ -34,8 +36,9 @@
 
         <div class="buttons">
             <button class="add-btn">Add</button>
-            <button class="cancel-btn">Cancel</button>
+            <button class="cancel-btn" (click)="onCancel($event)">Cancel</button>
         </div>
     </form>
+<!-- </div> -->
 </div>
 <div class="spacer"></div>
