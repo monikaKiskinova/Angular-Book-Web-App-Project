@@ -37,7 +37,6 @@ export class UserService implements OnDestroy {
     return this.http.post<User>('/users/login', {email, password})
     .pipe(tap((user) => {
       this.user$$.next(user);
-      console.log(this.isLoggedIn);
     }))
     // .pipe(tap((Response) => console.log(Response.isAuth)));
   }
@@ -46,18 +45,40 @@ export class UserService implements OnDestroy {
     return this.http.post<User>('/users/register', {email, password, rePassword})
     .pipe(tap((user) => {
       this.user$$.next(user);
-      console.log(this.isLoggedIn);
     }));
+  }
+  
+  getUser() {
+    // const email = this.user?.email;
+    const userId = this.user?._id;
+    return this.http.get<User>(`/users/${userId}`);
   }
 
   getProfile() {
-    return this.http.get<User>(`/users/profile`)
-    // return this.http.get<User>(`/users`)
-    .pipe(tap((user) => this.user$$.next(user)));
+    return this.http
+      .get<User>('/users/profile')
+      .pipe(tap((user) => this.user$$.next(user)));
   }
-  
-  // getUser(userId: string) {
-  //   return this.http.get<User>(`/users/${userId}`);
+
+  // updateProfile(email: string) {
+  //   return this.http
+  //     .put<User>(`/users/profile`, {email})
+  //     .pipe(tap((user) => this.user$$.next(user)));
+  // }
+
+  updateUserList(title: string, page: number) {
+    this.user?.bookProgressList.push({title: title, page: page});
+    const payload = {...this.user};
+    return this.http
+      // .patch<User>(`/users/${this.user?._id}`, payload)
+      .put<User>(`/users/${this.user?._id}`, payload)
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
+
+  // updateTheme(themeId: string, themeName: string, postText: string) {
+  //   const payload = { themeName, postText };
+  // //const payload = {};
+  //   return this.http.put<Theme>(`/api/themes/${themeId}`, payload);
   // }
 
   logout() {
