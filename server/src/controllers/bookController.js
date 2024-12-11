@@ -13,7 +13,7 @@ bookController.get('/', async (req, res) => {
 });
 
 bookController.post('/', async (req, res) => {
-    const userId = req.user._id;
+    const userId = req.user?._id;
     const bookData = req.body;
 
     try {

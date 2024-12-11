@@ -1,7 +1,9 @@
 
 <div class="container">
     <div class="add-btn">
+    @if(isLoggedIn){
         <input type="button" value="Add a book" routerLink="/add-book"/>
+    }
     </div>
     <h2>All books</h2>
     <div class="all-books">

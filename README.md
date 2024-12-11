@@ -27,6 +27,9 @@ Implementation:
 14. Add Book details page;
 
 15. Add login and register functionality;
+16. Add authentication component;
+17. Add logged-in user functionality - public/private part accessibility;
+18. Add validation and error messages to register
 
 
 

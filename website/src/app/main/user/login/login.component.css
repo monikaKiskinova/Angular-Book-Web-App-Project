@@ -5,9 +5,10 @@
   margin-top: 50pt;
   vertical-align: middle;
   background-color: burlywood;
-  /* justify-items: center; */
+  justify-items: center;
   padding: 30pt 50pt;
   /* padding-top: 25pt; */
+  box-shadow: 0 5px 20px 0;  
 }
 
 input {

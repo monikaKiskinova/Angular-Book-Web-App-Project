@@ -51,6 +51,7 @@ function generateResponse(user) {
         _id: user._id,
         email: user.email,
         accessToken: token,
+        isAuth: true, 
     };
 }
 

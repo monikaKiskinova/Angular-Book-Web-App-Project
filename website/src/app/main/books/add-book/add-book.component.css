@@ -8,6 +8,15 @@
     padding: 30pt 50pt;
 }
 
+.container {
+    background-color: burlywood;
+    width: 60%;
+    align-items: center;
+    /* margin-top: 30pt; */
+    justify-self: center;
+    /* vertical-align: middle; */
+}
+
 h3 {
     text-align: center;
 }

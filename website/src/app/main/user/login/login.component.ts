@@ -6,7 +6,6 @@ import { UserService } from '../user.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  providers: [UserService],
   imports: [RouterLink, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -14,9 +13,9 @@ import { UserService } from '../user.service';
 export class LoginComponent {
   constructor(private userService: UserService, private router: Router) {}
 
-  formSubmitHandler(form: NgForm) {
+  loginHandler(form: NgForm) {
     if(form.invalid) {
-      console.log('The form is invalid.');
+      console.error('The form is invalid.');
       return;
     }
 
@@ -24,7 +23,11 @@ export class LoginComponent {
 
     this.userService.login(email, password).subscribe(() => {
       this.router.navigate(['/profile']);
-    })
+    });
+    // this.userService.login(email, password).subscribe((res: any) => {
+    //   localStorage.setItem('accessToken', res.accessToken)
+    //   this.router.navigate(['/profile']);
+    // })
   }
 
 }

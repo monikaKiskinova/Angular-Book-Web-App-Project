@@ -5,10 +5,17 @@ import { HomeComponent } from './main/home/home.component';
 import { RouterOutlet } from '@angular/router';
 import { PageNotFoundComponent } from './main/page-not-found/page-not-found.component';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { appInterceptor } from './app.interceptor';
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  providers: [{
+    provide: HTTP_INTERCEPTORS, 
+    multi: true,
+    useExisting: appInterceptor,
+  }],
   imports: [RouterOutlet, HeaderComponent, FooterComponent, HomeComponent, PageNotFoundComponent, AuthenticateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

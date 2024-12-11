@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book } from './types/book';
+import { Subscription } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiService implements OnDestroy {
   // apiUrl = environment.apiUrl;
+  userSubscription: Subscription | null = null;
 
   constructor(private http: HttpClient) { }
 
@@ -21,12 +23,15 @@ export class ApiService {
   }
 
   getSingleBook(bookId: string) {
-    // return this.http.get<Book>(`${this.apiUrl}/books/${bookId}`);
     return this.http.get<Book>(`/books/${bookId}`);
   }
 
   createBook(title: string, author: string, img: string, year: number, genre: string, description: string) {
     const payload = {title, author, img, year, genre, description};
-    return this.http.post<Book>('/home', payload);
+    return this.http.post<Book>('/books', payload);
+  }
+
+  ngOnDestroy(): void {
+    this.userSubscription?.unsubscribe();
   }
 }

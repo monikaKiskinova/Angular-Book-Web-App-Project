@@ -1,19 +1,25 @@
 <header>
-    <div class="container">
-        <div id="logo-container">
-            <a routerLink="/"><img src="logo.png" alt="The Book Bank logo"></a>
-            <p class="logo"><a routerLink="/home">The Book Bank</a></p>
-        </div>
+    <!-- <div class="container"> -->
+    <div id="logo-container">
+        <a routerLink="/"><img src="logo.png" alt="The Book Bank logo"></a>
+        <p class="logo"><a routerLink="/home">The Book Bank</a></p>
     </div>
+    <!-- </div> -->
 </header>
 <nav>
     <div class="" id="nav-items">
         <ul class="nav-items">
             <li> <a routerLink="/home">Home</a></li>
             <li> <a routerLink="/books">Books</a></li>
+            @if(isLoggedIn){
             <li> <a class="profile" routerLink="/profile">My Profile</a></li>
-            <li> <a class="profile" routerLink="/login">Log in</a></li> <!-- //for testing the login -->
-            <li> <a class="profile" routerLink="/logout">Log out</a></li> <!-- //for testing the login -->
+            <li> <a class="profile" (click)="logout()">Log out</a></li>
+            }
+            <!-- } @else { -->
+            @if(!isLoggedIn){
+            <li> <a class="profile" routerLink="/login">My Profile</a></li>
+            <li> <a class="profile" routerLink="/login">Log in</a></li>
+            }
         </ul>
         <div class="clear"></div>
     </div>

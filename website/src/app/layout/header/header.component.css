@@ -21,7 +21,7 @@ nav {
 
 #logo-container {
     display: flex;
-    /* margin-left: 15pt; */
+    margin-left: 20pt;
 }
 
 img {
@@ -51,6 +51,7 @@ a {
 
 li a:hover {
     color: white;
+    cursor: pointer;
 }
 
 /* @media(max-width: 600px) {

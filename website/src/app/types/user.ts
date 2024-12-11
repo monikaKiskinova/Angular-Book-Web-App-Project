@@ -6,4 +6,5 @@ export interface User {
     readList: string[],
     wantToReadList: string[],
     bookProgressList: string[],
+    isAuth: boolean;
 }
