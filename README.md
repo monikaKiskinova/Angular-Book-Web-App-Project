@@ -31,7 +31,9 @@ Implementation:
 17. Add logged-in user functionality - public/private part accessibility;
 18. Add validation and error messages to register; 
 19. Making Home page show last 5 books added (back-end);
-20. Adding functionality to Books reading progress list;
+20. Adding functionality to Books reading progress list; (has a problem)
+
+21. Adjusting book details buttons and adding a resolvers; 
 
 
 

@@ -11,26 +11,31 @@
             <p>{{book.genre}}</p>
             <p>{{book.description}}</p>
             <div class="clear"></div>
-            <div class="buttons">
-                <!-- <input type="button" value="Add a book" routerLink="/add-book"/> -->
+
+            <!-- <div class="buttons">
                 <button>Edit</button>
                 <button>Delete</button>
-            </div>
+            </div> -->
         </div>
     </div>
     
 
     <div class="add-to-list-links">
-        <span class="read-list">I've read this book</span>
-        <span class="wish-list">Add to wish list</span>
+        @if(isLoggedIn) {
+            <span class="read-list">I've read this book</span>
+            <span class="wish-list">Add to wish list</span>
+        } @else {
+            <span class="read-list" routerLink="/login">I've read this book</span>
+            <span class="wish-list" routerLink="/login">Add to wish list</span>
+        }
     </div>
 
-    <div class="comments">
+    <!-- <div class="comments">
         <h3>Comments:</h3>
         @for (comment of comments; track $index) {
         <p>{{comment}}</p>
         }
         <button>Comment</button>
-    </div>
+    </div> -->
 
 </div>
